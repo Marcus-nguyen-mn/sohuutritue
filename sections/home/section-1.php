@@ -1,39 +1,105 @@
-<section class="first_intro">
-    <div class="first_intro_contain">
-        <div class="video-fi">
-            <video poster="<?php echo get_field("video_background"); ?>" playsinline="" autoplay="" muted="" loop="">
-                <source data-src="<?php echo get_field("video_background"); ?>" type="video/mp4" src="<?php echo get_field("video_background"); ?>">
-            </video>
-        </div>
-        <div class="content-on-fi">
-            <div class="title-fi">
-                <?php echo get_field("big_title_sec_1"); ?>
+<div class="news-highlight">
+    <div class="mc-container">
+        <div class="nsh-row">
+            <div class="nsh-col-left">
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'cat' => 4,
+                    'posts_per_page' => 1,
+                );
+                $post_nes_h1 = new WP_Query($args);
+                if ($post_nes_h1->have_posts()) :
+                    while ($post_nes_h1->have_posts()) : $post_nes_h1->the_post();
+                ?>
+                        <a href="<?php echo get_the_permalink(); ?>" class="post-left">
+                            <div class="thumb-post">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+                            </div>
+                            <div class="date">
+                                <?php echo get_the_date(); ?>
+                            </div>
+                            <div class="title">
+                                <?php echo get_the_title(); ?>
+                            </div>
+                            <div class="excerpt">
+                                <?php echo get_the_excerpt(); ?>
+                            </div>
+                        </a>
+                <?php
+                    endwhile;
+                endif;
+
+                // Reset Post Data
+                wp_reset_postdata();
+                ?>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'cat' => 4,
+                    'posts_per_page' => 2,
+                    'offset' => 1,
+                );
+                $post_nes_left_child = new WP_Query($args);
+                if ($post_nes_left_child->have_posts()) :
+                    while ($post_nes_left_child->have_posts()) : $post_nes_left_child->the_post();
+                ?>
+                        <a href="<?php echo get_the_permalink(); ?>" class="post-left-child">
+                            <div class="title">
+                                <?php echo get_the_title(); ?>
+                            </div>
+                        </a>
+                <?php
+                    endwhile;
+                endif;
+
+                // Reset Post Data
+                wp_reset_postdata();
+                ?>
             </div>
-            <div class="desc-fi">
-                <?php echo get_field("desc_sec_1"); ?>
-            </div>
-        </div>
-        <div class="companion">
-            <div class="companion-cover">
-                Nhãn hàng đồng hành
-            </div>
-        </div>
-        <div class="comment-your-prject mc-vibrate-btn-1">
-            <div class="comment-contain">
-                <div class="ic-arrown">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt="Arrow">
+
+            <div class="nsh-col-right">
+                <div class="title-bor">
+                    Tin tức nổi bật
                 </div>
-                <div class="txt-cmt">
-                    HÃY THẢO LUẬN <br /> VỀ DỰ ÁN CỦA BẠN
+                <div class="list-post-news-h">
+                    <?php
+                    $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'cat' => 4,
+                        'posts_per_page' => 2,
+                        'offset' => 3,
+                    );
+                    $post_nes_h2 = new WP_Query($args);
+                    if ($post_nes_h2->have_posts()) :
+                        while ($post_nes_h2->have_posts()) : $post_nes_h2->the_post();
+                    ?>
+                            <a href="<?php echo get_the_permalink(); ?>" class="item">
+                                <div class="thumb-post">
+                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
+                                </div>
+                                <div class="date">
+                                    <?php echo get_the_date(); ?>
+                                </div>
+                                <div class="title">
+                                    <?php echo get_the_title(); ?>
+                                </div>
+                                <div class="excerpt">
+                                    <?php echo wp_trim_words(get_the_excerpt(), 24, '...'); ?>
+                                </div>
+                            </a>
+                    <?php
+                        endwhile;
+                    endif;
+
+                    // Reset Post Data
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
         </div>
-        <a href="<?php echo get_field("link_projects_sec_6"); ?>" class="btn-show-project heartbeat-mc">
-            <div class="num-and-ic">
-                <div class="num">1000+</div>
-                <div class="icon"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow-white.png" alt="arrow"></div>
-            </div>
-            <p>Dự án đã thực hiện</p>
-        </a>
     </div>
-</section>
+</div>

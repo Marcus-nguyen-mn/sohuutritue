@@ -34,6 +34,17 @@
     .mc_news .news-left-cover .item-col .thumb-post img{
         height: 150px;
     }
+    .service-and-form .ser_and_form .left-service{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .service-and-form .ser_and_form .right-form{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .service-and-form .list-post-service .list-post-service-1 .thumb-post img{
+        height: 280px;
+    }
 }
 @media only screen and (max-width: 876px){
     .news-highlight .nsh-col-left img{
@@ -59,6 +70,9 @@
     }
     .news-col-right .news-right-cover .item-right .thumb-post img{
         height: 134px;
+    }
+    .service-and-form .list-post-service .list-post-service-1 .thumb-post img{
+        height: 230px;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -144,6 +158,20 @@
     }
     .mc_mbshtt{
         padding: 0;
+    }
+    .service-and-form .list-post-service .list-post-service-1 .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .service-and-form .list-post-service .list-post-service-1 .thumb-post img{
+        height: 240px;
+    }
+    .service-and-form .list-post-service .list-post-service-2 .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
     }
 }
 @media only screen and (max-width: 438px) {

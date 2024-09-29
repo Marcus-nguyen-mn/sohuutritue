@@ -16,10 +16,34 @@
 
 <body <?php body_class(); ?> id='top'>
 
-    <section class="header">
-        <?php
-        // wp_nav_menu(array(
-        //     'theme_location' => 'main_menu',
-        // ));
-        ?>
+    <section class="mc_header">
+        <div class="container-head">
+            <div class="mc_header_cover">
+                <div class="row-header">
+                    <div class="logo-head">
+                        <a href="<?php echo site_url(); ?>">
+                            <img src="<?php echo get_field("logo_main", "option"); ?>" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="main-menu-head">
+                        <?php
+                        wp_nav_menu(array(
+                            'theme_location' => 'main_menu',
+                        ));
+                        ?>
+                    </div>
+                    <div class="right-search style-search">
+                        <form role="search" method="get" class="search_form_footer" action="<?php echo esc_url(home_url('/')); ?>">
+                            <div class="search_form_page_wrap">
+                                <input type="search" class="search-field" placeholder="Điền từ khóa" value="<?php echo get_search_query(); ?>" name="s" />
+                                <button type="submit" class="search_submit_search"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>

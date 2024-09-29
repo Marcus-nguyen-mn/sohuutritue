@@ -173,6 +173,22 @@
         max-width: 100%;
         width: 100%;
     }
+    .mc-footer .ft-left{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc-footer .ft-right{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .info-footer .one-info .icon{
+        flex: 0 0 10%;
+        max-width: 8%;
+    }
+    .info-footer .one-info .content-info{
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
 }
 @media only screen and (max-width: 438px) {
 }

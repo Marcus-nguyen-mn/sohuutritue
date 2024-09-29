@@ -13,7 +13,10 @@ $file_includes = [
     'inc/acf-options.php',                  // ACF Option page
     'inc/duplicate.php',              // Dupplicate Post 
     'inc/cpt-mbshtt.php',              // CPT Mua Ban So Huu Tri Tue    
-    'inc/cpt-services.php',              // CPT Dịch vụ        
+    'inc/cpt-services.php',              // CPT Dịch vụ    
+    'inc/cpt-document.php',              // CPT Tài liệu  
+    'inc/cpt-team.php',              // CPT Đội ngũ chuyên gia 
+    'inc/cpt-qa.php',
 ];
 foreach ($file_includes as $file) {
     if (!$filePath = locate_template($file)) {

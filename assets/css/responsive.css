@@ -45,6 +45,15 @@
     .service-and-form .list-post-service .list-post-service-1 .thumb-post img{
         height: 280px;
     }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .right-shtt .list-posts .item img{
+        height: 230px;
+    }
+    .mc-archive .list-post-archive .item .thumb-post img{
+        height: 155px;
+    }
+    .team_experts .mc-archive .list-post-archive .item .thumb-post img{
+        height: 255px;
+    }
 }
 @media only screen and (max-width: 876px){
     .news-highlight .nsh-col-left img{
@@ -73,6 +82,30 @@
     }
     .service-and-form .list-post-service .list-post-service-1 .thumb-post img{
         height: 230px;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .left-dp{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .right-shtt{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .left-dp .list-dp{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .left-dp a{
+        margin-right: 40px;
+    }
+    .mc-archive .list-post-archive .item{
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+    .team_experts .mc-archive .list-post-archive .item .thumb-post img{
+        height: 286px;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -188,6 +221,40 @@
     .info-footer .one-info .content-info{
         flex: 0 0 90%;
         max-width: 90%;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .left-dp{
+        margin-bottom: 18px;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .right-shtt .list-posts .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .right-shtt .list-posts .item2{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mc_archive_shttdp .mc_archive_shttdp_cover .left-dp a{
+        margin-right: 30px;
+    }
+    .mc-archive .list-post-archive .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    .mc-archive .list-post-archive{
+        margin: 0;
+    }
+    .mc-archive .list-post-archive .item .thumb-post img{
+        height: 222px;
+    }
+    .team_experts .mc-archive .list-post-archive .item .thumb-post img{
+        height: 440px;
+    }
+    .faq-question .thumb{
+        display: none;
+    }
+    .faq-question .title{
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 438px) {

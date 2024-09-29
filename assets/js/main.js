@@ -1,6 +1,7 @@
 jQuery(document).ready(function(){
     sliderLogoPartner();
     sliderTradeMarkViet();
+    questAnswer();
 });
 
 function sliderLogoPartner(){
@@ -82,4 +83,50 @@ function sliderTradeMarkViet(){
       }
     ]
   });
+}
+
+function questAnswer(){
+  const faqItems = document.querySelectorAll('.faq-item');
+  if(faqItems){
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const arrow = item.querySelector('.arrow');
+  
+      question.addEventListener('click', () => {
+          // Nếu câu trả lời đã hiển thị, thì ẩn nó đi
+          if (answer.style.display === 'block') {
+              
+              arrow.classList.remove('up');
+              answer.style.maxHeight = 0;
+              answer.style.transition = "max-height 0.4s ease";
+              setTimeout(() => {
+                answer.style.display = 'none';
+              }, 100);
+          } else {
+              // Đóng tất cả các câu hỏi khác
+              faqItems.forEach(i => {
+                  const otherAnswer = i.querySelector('.faq-answer');
+                  const otherArrow = i.querySelector('.arrow');
+                  if (otherAnswer.style.display === 'block') {
+                      
+                      otherArrow.classList.remove('up');
+                      otherAnswer.style.maxHeight = 0;
+                      otherAnswer.style.transition = "max-height 0.4s ease";
+                      setTimeout(() => {
+                        otherAnswer.style.display = 'none';
+                      }, 100);
+                  }
+              });
+              
+              // Hiển thị câu trả lời cho câu hỏi hiện tại
+              answer.style.display = 'block';
+              arrow.classList.add('up');
+              answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+      });
+  });
+  }
+
+
 }

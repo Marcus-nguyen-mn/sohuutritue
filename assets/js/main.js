@@ -2,6 +2,7 @@ jQuery(document).ready(function(){
     sliderLogoPartner();
     sliderTradeMarkViet();
     questAnswer();
+    menuMobHandler();
 });
 
 function sliderLogoPartner(){
@@ -127,6 +128,30 @@ function questAnswer(){
       });
   });
   }
+}
 
-
+function menuMobHandler(){
+  let barMobOpenMenu = document.querySelector(".bar-mob-open-menu");
+  let menuMobile = document.querySelector(".menu-mobile-hanlder");
+  let overLaymenuMobile = document.querySelector(".overlay-menu-mob");
+  let closeMenuMob = document.querySelector(".cls-menu-mob");
+  
+  if(barMobOpenMenu){
+    barMobOpenMenu.onclick = ()=>{
+      menuMobile.style.display = "block";
+      overLaymenuMobile.style.display = "block";
+    }
+  }
+  if(closeMenuMob){
+    closeMenuMob.onclick = ()=>{
+      menuMobile.style.display = "none";
+      overLaymenuMobile.style.display = "none";
+    }
+  }
+  if(overLaymenuMobile){
+    overLaymenuMobile.onclick = ()=>{
+      menuMobile.style.display = "none";
+      overLaymenuMobile.style.display = "none";
+    }
+  }
 }

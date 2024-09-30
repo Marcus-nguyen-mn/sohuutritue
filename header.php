@@ -47,3 +47,46 @@
 
 
     </section>
+    <section class="mc-header-mobile">
+        <div class="container-head">
+            <div class="row-header-mob">
+                <div class="logo-head-mob">
+                    <a href="<?php echo site_url(); ?>">
+                        <img src="<?php echo get_field("logo_main", "option"); ?>" alt="Logo">
+                    </a>
+                </div>
+                <div class="bar-mob bar-mob-open-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="menu-mobile menu-mobile-hanlder fade-in-left">
+        <div class="cls-menu-mob">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="logo-menu-mob">
+            <img src="<?php echo get_field("logo_main", "option"); ?>" alt="Logo">
+        </div>
+        <div class="menu-mob-cover">
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'main_menu',
+            ));
+            ?>
+        </div>
+        <div class="search-menu-mob">
+            <div class="style-search">
+                <form role="search" method="get" class="search_form_footer" action="<?php echo esc_url(home_url('/')); ?>">
+                    <div class="search_form_page_wrap">
+                        <input type="search" class="search-field" placeholder="Điền từ khóa" value="<?php echo get_search_query(); ?>" name="s" />
+                        <button type="submit" class="search_submit_search"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="overlay-menu-mob">
+
+    </div>

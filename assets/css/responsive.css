@@ -5,7 +5,15 @@
     
 }
 @media only screen and (max-width: 1366px) {
-    
+    .container-head{
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .main-menu-head .menu a{
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 1200px) {
     .mc-container{
@@ -13,6 +21,15 @@
         padding: 0;
         margin: 0 auto;
         box-sizing: border-box;
+    }
+    .mc_header{
+        display: none;
+    }
+    .mc-header-mobile{
+        display: block;
+    }
+    body{
+        padding-top: 106px;
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -53,6 +70,25 @@
     }
     .team_experts .mc-archive .list-post-archive .item .thumb-post img{
         height: 255px;
+    }
+    .mc_single_left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    .mc_single_right{
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    .mc_single .info_contact{
+        margin-bottom: 30px;
+    }
+    .mc_single .item-cover .thumb img{
+        height: 210px;
+    }
+    .mc_single .service_in_single .thumb-post img{
+        height: 420px;
     }
 }
 @media only screen and (max-width: 876px){
@@ -255,6 +291,18 @@
     }
     .faq-question .title{
         font-size: 16px;
+    }
+    .mc_single .mc_single_left .title{
+        font-size: 20px;
+    }
+    .mc_single .item-cover .thumb img{
+        height: 120px;
+    }
+    .mc_single .service_in_single .thumb-post img {
+        height: 230px;
+    }
+    .row-header-mob .logo-head-mob a{
+        width: 70px;
     }
 }
 @media only screen and (max-width: 438px) {

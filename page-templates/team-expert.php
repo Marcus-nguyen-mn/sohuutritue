@@ -29,7 +29,7 @@ get_header();
                     if ($post_team->have_posts()) :
                         while ($post_team->have_posts()) : $post_team->the_post();
                     ?>
-                            <a href="<?php echo get_the_permalink(); ?>" class="item">
+                            <div class="item">
                                 <div class="thumb-post">
                                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>">
                                 </div>
@@ -42,7 +42,7 @@ get_header();
                                 <div class="mc-common-excerpt">
                                     <?php echo wp_trim_words(get_the_excerpt(), 24, '...'); ?>
                                 </div>
-                            </a>
+                            </div>
                     <?php
                         endwhile;
                         // Hiển thị phân trang
